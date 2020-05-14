@@ -1,0 +1,239 @@
+{% extends 'admin/admin_layout.html' %}
+{% block content %}
+	<!-- Content Wrapper. Contains page content -->
+	<div class="content-wrapper">
+		<!-- Content Header (Page header) -->
+		<div class="content-header">
+			<div class="container-fluid">
+				<div class="row mb-2">
+					<div class="col-sm-6">
+						<h1 class="m-0 text-dark">Add User</h1>
+					</div><!-- /.col -->
+					<div class="col-sm-6">
+						<ol class="breadcrumb float-sm-right">
+							<li class="breadcrumb-item"><a href="/administrator/dashboard">Home</a></li>
+							<li class="breadcrumb-item active">Mng Users </li>
+							<li class="breadcrumb-item active">Add User </li>
+						</ol>
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div><!-- /.container-fluid -->
+		</div>
+		<!-- /.content-header -->
+
+		<!-- Main content -->
+		<section class="content">
+			<div class="container-fluid">
+				<!-- Small boxes (Stat box) -->
+			
+				<div class="row">
+					<div class="col-10 align-self-center content-block">
+									 <!-- /.card -->
+
+				 <div class="card card-block">
+					
+					<div class="card-body">
+						<form method="post" id="register_form" enctype="multipart">
+
+						{% csrf_token %}
+						
+						<div class="" id="select_user" class="select_user" >
+						<div class="form-group">
+												<label>Select User</label>
+												<select class="form-control" id="user_type">
+													<option value="1">Customer</option>
+													<option value="2">Owner</option>
+				
+												</select>
+											</div>
+
+								<button type="button" class="btn btn-info float-right" id="btn_select_user">Next</button>
+							</div> 
+							
+				
+				 <div class="register_details" style="display: none;">
+					 <ul class="nav nav-tabs">
+					
+					 <li class="nav-item">
+						<a class="nav-link inactive_tab1 active" id="list_personal_details" style="border:1px solid #ccc">Personal details</a>
+					 </li>
+					 <li class="nav-item">
+						<a class="nav-link inactive_tab1" id="list_id_proof" style="border:1px solid #ccc">ID proof</a>
+					 </li>
+					</ul>
+					<div class="tab-content" style="margin-top:16px;">
+					<!-- personal details -->
+					<div class="tab-pane active" id="personal_details">
+						<div class="card">
+							<div class="card-body">
+								<div class="form-group">
+                    <label for="firstname">First name</label>
+                    <input type="text" name="firstname" class="form-control" id="firstname" placeholder="kishanbhai" required="">
+                </div>
+                	<div class="form-group">
+                    <label for="lastname">Last name</label>
+                    <input type="text" name="lastname" class="form-control" id="lastname" placeholder="kishanbhai" required="">
+                </div>
+                <div class="form-group">
+                        <label>Address</label>
+                        <textarea class="form-control" rows="3" placeholder="" required=""></textarea>
+                 </div>
+                <div class="form-group">
+                	<label for="city">City</label>
+                		<select class="form-control" required="" id="city" required="">
+                			<option value="1">Ahmedabad</option>
+                		</select>
+                
+                </div>
+                 <div class="form-group">
+                    <label for="pincode">Pincode</label>
+                    <input type="number" name="pincode" class="form-control" id="pincode" placeholder="382350" required="">
+                </div> 
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="xyz@gmail.com">
+                </div> 
+                 <div class="form-group">
+                    <label for="mobileno">Mobile no.</label>
+                    <input type="tel" name="mobileno" class="form-control" id="mobileno" placeholder="8945726362" required="">
+                </div>
+                 <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" class="form-control" id="password" placeholder="........" required="">
+                </div> 
+
+                <div class="form-group">
+                	<button type="button" name="btn_personal_details" id="btn_personal_details" class="btn btn-info float-right">Next</button>
+                </div>
+
+							</div>
+						</div>
+					</div>
+					<!-- /personal details -->
+
+					<!--ID proof-->
+					<div class="tab-pane fade" id="id_proof_details">
+						<div class="card">
+							<div class="card-body">
+								<div class="form-group">
+                    <label for="idproof">ID proof</label>
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="idproof" name="idproof" required="">
+                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                      </div>
+                      	</div>
+                  </div>
+
+                
+                <div class="form-group">
+                		<button type="button" name="previous_btn_id_proof" id="previous_btn_id_proof" class="btn btn-default float-left">Previous</button>
+                		<button type="button" name="btn_id_proof" id="btn_id_proof" class="btn btn-success float-right">Submit</button>
+                </div>  
+							</div>
+						</div>
+					</div>
+					<!--/ID proof-->
+				</div>
+			</div>
+
+					 </form>         
+					</div>
+
+				
+				 </div>
+					<!-- /.card -->
+				</div>
+			</div>
+				<!-- /.row (main row) -->
+			</div><!-- /.container-fluid -->
+		</section>
+		<!-- /.content -->
+	</div>
+	<!-- /.content-wrapper -->
+	
+
+	
+
+
+
+
+{% endblock %}
+
+{% block body_extra %}
+<script type="text/javascript">
+	$(document).ready(function () {
+	  bsCustomFileInput.init();
+	
+	
+	 $('#btn_select_user').click(function()
+	 {
+	
+		 $('#select_user').hide();
+		 
+	
+		 console.log($( "#user_type option:selected" ).text());
+	
+		 $('.register_details').show();
+	 if($( "#user_type option:selected" ).text() == 'Customer')
+	 {
+				 $('.register_details > ul > li:nth-child(2)').hide();
+				 $('#btn_personal_details').addClass('bg-success');
+				 $('#btn_personal_details').removeClass('bg-info');
+	 }
+		 
+	
+	 });
+	
+	  $('#btn_personal_details').click(function()
+	{
+	
+		if($( "#user_type option:selected" ).text() == 'Customer')
+		{
+				$('#register_form').submit();
+		}
+		else
+		{
+			 $('#list_personal_details').removeClass('active active_tab1');
+		 $('#list_personal_details').removeAttr('href data-toggle');
+		 $('#personal_details').removeClass('active');
+		 $('#list_id_proof').removeClass('inactive_tab1');
+		 $('#list_id_proof').addClass('active_tab1 active_tab1');
+		 $('#list_id_proof').attr('href', '#id_proof_details');
+		   $('#list_id_proof').attr('data-toggle', 'tab');
+		   $('#id_proof_details').removeClass('fade');
+		   $('#id_proof_details').addClass('active in');
+		 }  
+	
+	 
+	});
+	
+	   $('#previous_btn_id_proof').click(function()
+	{
+			 $('#list_id_proof').removeClass('active active_tab1');
+		 $('#list_id_proof').removeAttr('href data-toggle');
+		 $('#id_proof_details').removeClass('active in');
+		 $('#list_id_proof').addClass('inactive_tab1');
+	  
+	
+		 $('#list_personal_details').removeClass('inactive_tab1 ');
+		 $('#list_personal_details').addClass('active_tab1 active');
+		 $('#list_personal_details').attr('href','#personal_details')
+		   $('#list_personal_details').attr('data-toggle', 'tab');
+		   $('#personal_details').addClass('active in');
+	
+	 
+	}); 
+	
+	$('#btn_id_proof').click(function()
+	   {
+	
+		   $('#register_form').submit();
+	  });   
+	
+	});
+	
+	</script>
+	
+{% endblock body_extra %}
+
