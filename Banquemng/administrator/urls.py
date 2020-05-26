@@ -11,6 +11,4 @@ urlpatterns = [
       path('mngusers/adduser',views.adduser,name='adduser'),
       path('mngproperties/viewproperties/',views.viewproperties,name='viewproperties'),
       path('mngproperties/viewproperties/<int:property_id>',views.viewpropertiesd,name='viewpropertiesd'),
-
-
 ]
