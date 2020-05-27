@@ -33,47 +33,47 @@
                   <tr>
                     <td> <strong>User Type </strong></td>
                     <td colspan="3">:&nbsp;&nbsp;&nbsp;</td>
-                    <td>Owner</td>
+                    <td>{{ userinfo.user_type }}</td>
                   </tr>
                   <tr>
                     <td> <strong>First Name </strong ></td>
                     <td colspan="3">:&nbsp;&nbsp;&nbsp;</td>
-                    <td>Kishanbhai</td>
+                    <td>{{ userinfo.first_name }}</td>
                   </tr>
                   <tr>
                     <td> <strong>Last Name </strong></td>
                     <td colspan="3">:&nbsp;&nbsp;&nbsp;</td>
-                    <td>parekh</td>
+                    <td>{{ userinfo.lastnname }}</td>
                   </tr>
                   <tr>
                     <td> <strong>Email </strong></td>
                     <td colspan="3">:&nbsp;&nbsp;&nbsp;</td>
-                    <td>xyz@gmail.com</td>
+                    <td>{{ userinfo.email_id }}</td>
                   </tr>
                    <tr>
                     <td><strong>Mobile No. </strong></td>
                     <td colspan="3">:&nbsp;&nbsp;&nbsp;</td>
-                    <td>8974561263</td>
+                    <td>{{ userinfo.mobile_no }}</td>
                   </tr>
                    <tr>
                     <td><strong>Address </strong></td>
                     <td colspan="3">:&nbsp;&nbsp;&nbsp;</td>
-                    <td>near shajanand party plot</td>
+                    <td>{{ userinfo.address }}</td>
                   </tr>
                   <tr>
                     <td><strong>City </strong></td>
                     <td colspan="3">:&nbsp;&nbsp;&nbsp;</td>
-                    <td>Ahmedabad</td>
+                    <td>{{ userinfo.city_id.city_name }}</td>
                   </tr>
                   <tr>
                     <td><strong>Pincode </strong></td>
                     <td colspan="3">:&nbsp;&nbsp;&nbsp;</td>
-                    <td>382350</td>
+                    <td>{{ userinfo.pincode }}</td>
                   </tr>
                    <tr>
                     <td> <strong>Registration Date Time </strong></td>
                     <td colspan="3">:&nbsp;&nbsp;&nbsp;</td>
-                    <td>29/12/2021 19:45:30</td>
+                    <td>{{ userinfo.reg_date_time }}</td>
                   </tr>
                    <tr>
                     <td><strong>ID Proof </strong></td>
@@ -92,18 +92,13 @@
                   <tr>
                     <td><strong>IS a/c active? </strong></td>
                     <td colspan="3">:&nbsp;&nbsp;&nbsp;</td>
-                    <td>Yes</td>
+                    <td>{{ userinfo.active_status }}</td>
                   </tr>
-
-
                 </tbody>
               </table>
-          
             </div>
           </div>
           <!-- /.card -->
-
-      
           <!-- /.card -->
         </div>
       </div>

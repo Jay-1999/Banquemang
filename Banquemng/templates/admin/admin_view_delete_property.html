@@ -52,150 +52,20 @@
                 </tr>
                 </thead>
                 <tbody>
+                {% for propertydata in propertydata %}
                   <tr>
-                    <td>Party Plot</td>
-                    <td>shahjanand party plot</td>
-                    <td>kishanbhai</td>
-                    <td>8978461245</td>
-                    <td>5000</td>
-                    <td>5,00,000</td>
+                    <td>{{propertydata.property_category_id.property_name}}</td>
+                    <td>{{propertydata.property_name}}</td>
+                    <td>{{propertydata.user_id.first_name}}</td>
+                    <td>{{propertydata.user_id.mobile_no}}</td>
+                    <td>{{propertydata.capacity}}</td>
+                    <td>{{propertydata.normal_price}}</td>
                     <td><center><input type="checkbox" name="terms" id="8" checked=""></center></td>
                     <td><center><input type="checkbox" name="terms" id="8" checked=""></center></td>
-                    <td><a href="/administrator/mngproperties/viewproperties/1"<button type="button" class="btn btn-block btn-primary">View</button></a></td>
+                    <td><a href="/administrator/mngproperties/viewproperties/1"><button type="button" class="btn btn-block btn-primary">View</button></a></td>
                     <td><button type="button" class="btn btn-block btn-danger">delete</button></td>
                   </tr>
-                    <tr>
-                    <td>Banquet</td>
-                    <td>Superia</td>
-                    <td>Mihirbhai</td>
-                    <td>8978461245</td>
-                    <td>500</td>
-                    <td>1,00,000</td>
-                    <td><center><input type="checkbox" name="terms" id="8" ></center></td>
-                    <td><center><input type="checkbox" name="terms" id="8" checked=""></center></td>
-                    <td><a href="/administrator/mngproperties/viewproperties/1"<button type="button" class="btn btn-block btn-primary">View</button></a></td>
-                    <td><button type="button" class="btn btn-block btn-danger">delete</button></td>
-                  </tr>
-                     <tr>
-                    <td>Party Plot</td>
-                    <td>shahjanand party plot</td>
-                    <td>kishanbhai</td>
-                    <td>8978461245</td>
-                    <td>5000</td>
-                    <td>5,00,000</td>
-                    <td><center><input type="checkbox" name="terms" id="8" checked=""></center></td>
-                    <td><center><input type="checkbox" name="terms" id="8" checked=""></center></td>
-                    <td><a href="/administrator/mngproperties/viewproperties/1"<button type="button" class="btn btn-block btn-primary">View</button></a></td>
-                    <td><button type="button" class="btn btn-block btn-danger">delete</button></td>
-                  </tr>
-                    <tr>
-                    <td>Banquet</td>
-                    <td>Superia</td>
-                    <td>Mihirbhai</td>
-                    <td>8978461245</td>
-                    <td>500</td>
-                    <td>1,00,000</td>
-                    <td><center><input type="checkbox" name="terms" id="8" ></center></td>
-                    <td><center><input type="checkbox" name="terms" id="8" checked=""></center></td>
-                    <td><a href="/administrator/mngproperties/viewproperties/1"<button type="button" class="btn btn-block btn-primary">View</button></a></td>
-                    <td><button type="button" class="btn btn-block btn-danger">delete</button></td>
-                  </tr>
-                     <tr>
-                    <td>Party Plot</td>
-                    <td>shahjanand party plot</td>
-                    <td>kishanbhai</td>
-                    <td>8978461245</td>
-                    <td>5000</td>
-                    <td>5,00,000</td>
-                    <td><center><input type="checkbox" name="terms" id="8" checked=""></center></td>
-                    <td><center><input type="checkbox" name="terms" id="8" checked=""></center></td>
-                    <td><a href="/administrator/mngproperties/viewproperties/1"<button type="button" class="btn btn-block btn-primary">View</button></a></td>
-                    <td><button type="button" class="btn btn-block btn-danger">delete</button></td>
-                  </tr>
-                    <tr>
-                    <td>Banquet</td>
-                    <td>Superia</td>
-                    <td>Mihirbhai</td>
-                    <td>8978461245</td>
-                    <td>500</td>
-                    <td>1,00,000</td>
-                    <td><center><input type="checkbox" name="terms" id="8" ></center></td>
-                    <td><center><input type="checkbox" name="terms" id="8" checked=""></center></td>
-                    <td><a href="/administrator/mngproperties/viewproperties/1"<button type="button" class="btn btn-block btn-primary">View</button></a></td>
-                    <td><button type="button" class="btn btn-block btn-danger">delete</button></td>
-                  </tr>
-                     <tr>
-                    <td>Party Plot</td>
-                    <td>shahjanand party plot</td>
-                    <td>kishanbhai</td>
-                    <td>8978461245</td>
-                    <td>5000</td>
-                    <td>5,00,000</td>
-                    <td><center><input type="checkbox" name="terms" id="8" checked=""></center></td>
-                    <td><center><input type="checkbox" name="terms" id="8" checked=""></center></td>
-                    <td><a href="/administrator/mngproperties/viewproperties/1"<button type="button" class="btn btn-block btn-primary">View</button></a></td>
-                    <td><button type="button" class="btn btn-block btn-danger">delete</button></td>
-                  </tr>
-                    <tr>
-                    <td>Banquet</td>
-                    <td>Superia</td>
-                    <td>Mihirbhai</td>
-                    <td>8978461245</td>
-                    <td>500</td>
-                    <td>1,00,000</td>
-                    <td><center><input type="checkbox" name="terms" id="8" ></center></td>
-                    <td><center><input type="checkbox" name="terms" id="8" checked=""></center></td>
-                    <td><a href="/administrator/mngproperties/viewproperties/1"<button type="button" class="btn btn-block btn-primary">View</button></a></td>
-                    <td><button type="button" class="btn btn-block btn-danger">delete</button></td>
-                  </tr>
-                     <tr>
-                    <td>Party Plot</td>
-                    <td>shahjanand party plot</td>
-                    <td>kishanbhai</td>
-                    <td>8978461245</td>
-                    <td>5000</td>
-                    <td>5,00,000</td>
-                    <td><center><input type="checkbox" name="terms" id="8" checked=""></center></td>
-                    <td><center><input type="checkbox" name="terms" id="8" checked=""></center></td>
-                    <td><a href="/administrator/mngproperties/viewproperties/1"<button type="button" class="btn btn-block btn-primary">View</button></a></td>
-                    <td><button type="button" class="btn btn-block btn-danger">delete</button></td>
-                  </tr>
-                    <tr>
-                    <td>Banquet</td>
-                    <td>Superia</td>
-                    <td>Mihirbhai</td>
-                    <td>8978461245</td>
-                    <td>500</td>
-                    <td>1,00,000</td>
-                    <td><center><input type="checkbox" name="terms" id="8" ></center></td>
-                    <td><center><input type="checkbox" name="terms" id="8" checked=""></center></td>
-                    <td><a href="/administrator/mngproperties/viewproperties/1"<button type="button" class="btn btn-block btn-primary">View</button></a></td>
-                    <td><button type="button" class="btn btn-block btn-danger">delete</button></td>
-                  </tr>
-                     <tr>
-                    <td>Party Plot</td>
-                    <td>shahjanand party plot</td>
-                    <td>kishanbhai</td>
-                    <td>8978461245</td>
-                    <td>5000</td>
-                    <td>5,00,000</td>
-                    <td><center><input type="checkbox" name="terms" id="8" checked=""></center></td>
-                    <td><center><input type="checkbox" name="terms" id="8" checked=""></center></td>
-                    <td><a href="/administrator/mngproperties/viewproperties/1"<button type="button" class="btn btn-block btn-primary">View</button></a></td>
-                    <td><button type="button" class="btn btn-block btn-danger">delete</button></td>
-                  </tr>
-                    <tr>
-                    <td>Banquet</td>
-                    <td>Superia</td>
-                    <td>Mihirbhai</td>
-                    <td>8978461245</td>
-                    <td>500</td>
-                    <td>1,00,000</td>
-                    <td><center><input type="checkbox" name="terms" id="8" ></center></td>
-                    <td><center><input type="checkbox" name="terms" id="8" checked=""></center></td>
-                    <td><a href="/administrator/mngproperties/viewproperties/1"<button type="button" class="btn btn-block btn-primary">View</button></a></td>
-                    <td><button type="button" class="btn btn-block btn-danger">delete</button></td>
-                  </tr>            
+                {% endfor %}
                 </tbody>
                
               </table>
