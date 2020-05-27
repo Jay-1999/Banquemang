@@ -10,7 +10,7 @@ class User(models.Model):
     first_name = models.CharField(max_length=15)
     last_name = models.CharField(max_length=15)
     email_id = models.CharField(max_length=30,unique=True)
-    mobile_no = models.IntegerField(max_length=10,unique=True)
+    mobile_no = models.BigIntegerField(max_length=10,unique=True)
     address = models.TextField()
     city_id = models.ForeignKey(City,on_delete=models.CASCADE)
     pincode = models.IntegerField(max_length=6)
