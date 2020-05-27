@@ -8,12 +8,15 @@ def dashboard(request):
     return render(request,'admin/admin_dashboard.html')
 
 def viewusers(request):
+
     return render(request,'admin/admin_add_view_delete_users.html')
 
 def viewusersd(request,user_id):
+    
     return render(request,'admin/admin_viewd_user.html')    
 
 def adduser(request):
+    
     return render(request,'admin/admin_add_users.html')
 
 def viewproperties(request):
